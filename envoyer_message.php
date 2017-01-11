@@ -8,11 +8,6 @@
     	<p>Envoi du message ...</p>
     	<?php 
     		if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-    			echo "Nom : " . $_POST['nom'] . "<br />";
-    			echo "Prénom : " . $_POST['prenom'] . "<br />";
-    			echo "email : " . $_POST['email'] . "<br />";
-    			echo "Sujet : " . $_POST['sujet'] . "<br />";
-    			echo "Message : " . $_POST['message'] . "<br />";
 
     			// Connexion à la base de données
     			try{$bdd = new PDO('mysql:host=localhost;dbname=test;charset=utf8', 'root', '');}
