@@ -8,7 +8,6 @@
     	<p>Envoi du message ...</p>
     	<?php 
     		if (filter_var($_POST['email'], FILTER_VALIDATE_EMAIL)) {
-	    		//if (isset($_POST['nom']) AND isset($_POST['prenom']) AND isset($_POST['sujet']) AND isset($_POST['email']))
     			echo "Nom : " . $_POST['nom'] . "<br />";
     			echo "Prénom : " . $_POST['prenom'] . "<br />";
     			echo "email : " . $_POST['email'] . "<br />";
@@ -33,13 +32,6 @@
 				mail($to, $subject, $msg);
 
 	    		header('Location: Premier_exercice.php');
-	    		/*else
-	    		{	echo "Il manque des champs" . "<br />";
-	    			echo "Nom : " . $_POST['nom'] . "<br />";
-	    			echo "Prénom : " . $_POST['prenom'] . "<br />";
-	    			echo "email : " . $_POST['email'] . "<br />";
-	    			echo "Sujet : " . $_POST['sujet'] . "<br />";
-	    		}*/
 	    	}
 	    	else {
 	    		echo "ce n'est pas une adresse mail valide";
